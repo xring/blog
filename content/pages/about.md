@@ -1,5 +1,5 @@
 +++
-title = "About Me"
+title = "About"
 path = "about"
 +++
 
@@ -20,5 +20,7 @@ path = "about"
 - 基础设施架构、后端架构
 
 ## 联系
-- E-mail: xringxie@gmail.com
-- WeChat: xringxie
+- E-mail:  xringxie@gmail.com
+- WeChat:  xringxie
+- GitHub:  xring
+- Twitter: @xringxie

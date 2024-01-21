@@ -63,40 +63,19 @@
 
     <div class="content">
         {% block content %}
-        <div class="posts">
-            {%- if paginator %}
-                {%- set show_pages = paginator.pages -%}
-            {% else %}
-                {%- set show_pages = section.pages -%}
-            {% endif -%}
-
-            {%- for page in show_pages %}
-                <div class="post on-list">
-                    {{ post_macros::header(page=page) }}
-
-                    {{ post_macros::content(page=page, summary=true, show_only_description=page.extra.show_only_description | default(value=false)) }}
-                </div>
-            {% endfor -%}
-            <div class="pagination">
-                <div class="pagination__buttons">
-                {%- if paginator.previous %}
-                    <span class="button previous">
-                        <a href="{{ paginator.previous | safe }}">
-                            <span class="button__icon">←</span>&nbsp;
-                            <span class="button__text">Newer posts</span>
-                        </a>
-                    </span>
-                {% endif -%}
-                {%- if paginator.next %}
-                    <span class="button next">
-                        <a href="{{ paginator.next | safe }}">
-                            <span class="button__text">Older posts</span>&nbsp;
-                            <span class="button__icon">→</span>
-                        </a>
-                    </span>
-                {% endif -%}
-                </div>
-            </div>
+        <div class="post">
+            <div class="post-content">
+            <h1 id="hello">Hi there👋</h1>
+            <p>This is a collection of thoughts or something else that I wanted to share with
+            the universe.</p>
+            <p>I once had the impression that this would be an eternal work in progress. Today
+            I <em>know</em> that this blog <em>is</em> an eternal work in progress.</p>
+        </div>
+        <br>
+        <h2>Latest 5 posts:</h2>
+            {% set section = get_section(path="_index.md") %}
+            {% set top_5_pages = section.pages | slice(end=5) %}
+            {{ post_macros::list_posts(pages=top_5_pages) }}
         </div>
         {% endblock content %}
     </div>

@@ -10,13 +10,13 @@ tags=["ios", "xcode"]
 
 假设文件存储到 `~/Downloads`，在终端依次执行下面的命令：
 ```bash
-
+# 下面这条命令需要输入密码
 sudo xcode-select -s /Applications/Xcode.app
 
 xcodebuild -runFirstLaunch 
 
 # 需要替换为自己的路径，下面这条命令需要一些时间来执行
-# 执行完成终端会有输出，且会弹窗提示 "Veriyfing..."
+# 执行完成终端会有输出，且会弹窗提示 "Verifying..."
 xcrun simctl runtime add '/Users/xring/Downloads/iOS_17.2_Simulator_Runtime.dmg'
 ```
 

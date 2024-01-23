@@ -6,7 +6,7 @@ tags=["ios", "xcode"]
 +++
 更新 Xcode 到 15.2 之后，需要安装iOS_17.2_Simulator，但是在 Xcode 里下载总是网络错误，或者下载卡在 99% 的地方，可以用如下步骤来手动安装。
 
-打开官网 (https://developer.apple.com/download/all/?q=ios)[https://developer.apple.com/download/all/?q=ios]，下载 `iOS 17.2 Simulator Runtime.dmg` 文件。
+打开官网 [https://developer.apple.com/download/all/?q=ios](https://developer.apple.com/download/all/?q=ios)，登录后选择下载 `iOS 17.2 Simulator Runtime.dmg` 文件。
 
 假设文件存储到 `~/Downloads`，在终端依次执行下面的命令：
 ```bash

@@ -36,3 +36,8 @@ ssh-add ~/.ssh/id_rsa
 使用 `ssh-add -l` 来确认密钥已经成功添加到 `ssh-agent`。
 
 如果 SSH 密钥是有密码的，这个步骤需要输入密码。通过 `ssh-agent` 后续 Cargo 访问私仓时将不需要输入密码。
+
+当 Git 仓库中的代码更新了，使用以下命令来更新本地依赖的代码：
+```
+cargo update
+```

@@ -2,7 +2,7 @@
 title = "Mac 平台交叉编译 Rust 至 Linux 平台"
 date = 2024-10-21
 [taxonomies]
-tags=["rust", "cross-compiling"]
+tags=["rust", "cross-compiling", "cargo"]
 +++
 最近在用 Rust 开发一些提效小工具，在 Mac 平台编码但运行环境为 Linux（裸跑，非容器），将相关过程记录一下。
 

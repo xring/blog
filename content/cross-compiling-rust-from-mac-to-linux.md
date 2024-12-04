@@ -2,7 +2,7 @@
 title = "Mac 平台交叉编译 Rust 至 Linux 平台"
 date = 2024-10-21
 [taxonomies]
-tags=["rust", "cross-compiling", "cargo"]
+tags=["rust", "cross-compiling"]
 +++
 最近在用 Rust 开发一些提效小工具，在 Mac 平台编码但运行环境为 Linux（裸跑，非容器），将相关过程记录一下。
 
@@ -81,6 +81,8 @@ brew install FiloSottile/musl-cross/musl-cross
 ```toml
 [target.x86_64-unknown-linux-musl]
 linker = "x86_64-linux-musl-gcc"
+# -static-pie 如果不支持，则再添加下面这一行
+# rustflags = ["-C", "link-args=-static"]
 ```
 最后执行编译：
 ```bash
